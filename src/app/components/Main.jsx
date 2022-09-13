@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import {Provider} from 'react-redux';
 import {store} from "../store";
 import {ConnectedDashboard} from "./Dashboard";
@@ -6,6 +6,11 @@ import {Router, Route} from 'react-router-dom'
 import {history} from "../store/history";
 import {ConnectedNavigation} from "./Navigation";
 import {ConnectTaskDetail} from './TaskDetail';
+
+const RouteGuard = Component => ({match})=>{
+    console.info("Route guard", match);
+    return <Component match={match}/>
+}
 
 export const Main = ()=>(
     <Router history={history}>
@@ -15,12 +20,12 @@ export const Main = ()=>(
                 <Route
                     exact
                     path="/dashboard"
-                    render={()=>(<ConnectedDashboard/>)}
+                    render={RouteGuard(ConnectedDashboard)}
                 />
                 <Route
                     exact
                     path="/task/:id"
-                    render={({match})=>(<ConnectTaskDetail match={match} />)}
+                    render={RouteGuard(ConnectTaskDetail)}
                 />
             </div>
         </Provider>

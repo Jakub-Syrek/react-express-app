@@ -6,8 +6,6 @@ import createSagaMiddleware from 'redux-saga';
 const sagaMiddleWare = createSagaMiddleware();
 import * as sagas from './sagas'
 import * as mutations from './mutations'
-import {taskCreationSaga} from "./sagas";
-
 
 export const store = createStore(
     combineReducers({
@@ -57,5 +55,5 @@ export const store = createStore(
 );
 
 for(let saga in sagas){
-    sagaMiddleWare.run(taskCreationSaga)
+    sagaMiddleWare.run(sagas[saga])
 }
