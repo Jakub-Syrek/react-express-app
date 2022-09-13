@@ -7,4 +7,4 @@ export const store = createStore(
         return state;
     },
     applyMiddleware(createLogger())
-)
+);
