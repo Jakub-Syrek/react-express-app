@@ -41,6 +41,10 @@ export const updateTask = async task =>{
     }
 
 }
+app.post('/task/new',async (req,res)=>{
+    await addNewTask(req.body.task);
+    res.status(200).send();
+});
 
 app.post('/task/update', async(req,res)=>{
    let task = req.body.task;

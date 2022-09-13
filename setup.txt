@@ -20,3 +20,6 @@ npm install --save-dev mongodb
 npm run initialize
 npm install --save-dev express@4.16.3 cors@2.8.4 body-parser@1.18.3
 npm run server
+npm install --save-dev concurrently@4.0.1
+//both
+npm run start-dev
