@@ -6,7 +6,7 @@ const Navigation = ()=>(
     <div>
         <Link to="/dashboard">
             <h1>
-                WebsiteHome
+                Dashboard
             </h1>
         </Link>
     </div>

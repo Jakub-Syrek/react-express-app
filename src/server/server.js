@@ -11,10 +11,6 @@ let app = express();
 
 app.listen(port,console.log("Server listening on port", port));
 
-// app.get('/',(req,res)=>{
-//     res.send("Hello body world");
-// })
-
 app.use(
     cors(),
     bodyparser.urlencoded({extended:true}),
