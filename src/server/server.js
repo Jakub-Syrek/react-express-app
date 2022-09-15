@@ -4,6 +4,7 @@ import bodyparser from 'body-parser';
 import {connectDB} from './connect-db'
 import './initialize-db';
 import {authenticationRoute} from "./authenticate";
+import path from 'path';
 
 let port = 7777;
 
