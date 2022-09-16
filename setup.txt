@@ -23,3 +23,6 @@ npm run server
 npm install --save-dev concurrently@4.0.1
 //both
 npm run start-dev
+npm install -g localtunnel
+lt --port 8080 --subdomain my-react-express-app --local-host localhost
+https://my-react-express-app.loca.lt/
